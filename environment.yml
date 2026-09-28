@@ -1,0 +1,40 @@
+name: rl
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  # ---------- conda 管理的基础包 ----------
+  - numpy=2.3.5
+  - pandas=3.0.1
+  - openpyxl=3.1.5
+  - scikit-learn=1.8.0
+  - matplotlib>=3.7.0
+  # ---------- pip 安装 PyTorch (CUDA 12.8) ----------
+  - pip:
+    - torch==2.10.0+cu128
+    - torchvision==0.25.0+cu128
+    --extra-index-url https://download.pytorch.org/whl/cu128
+
+# ============================================================
+# 使用方法
+# ============================================================
+# 从本文件创建环境:
+#   conda env create -f environment.yml
+#
+# 激活环境:
+#   conda activate rl
+#
+# 更新已有环境:
+#   conda env update -f environment.yml --prune
+#
+# 导出当前环境（精确复现）:
+#   conda env export > environment_exact.yml
+#
+# 若安装 PyTorch 失败，手动执行:
+#   conda activate rl
+#   pip install torch==2.10.0+cu128 torchvision==0.25.0+cu128 \
+#       --index-url https://download.pytorch.org/whl/cu128

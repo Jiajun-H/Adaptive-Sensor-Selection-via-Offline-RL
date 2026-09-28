@@ -1,0 +1,64 @@
+# Core repository policy:
+# keep source code, configuration, and lightweight docs in Git.
+# keep data, generated artifacts, model weights, and local tooling out of Git.
+
+# Data and converted experiment exports
+data.xlsx
+converted_excel/
+试验数据记录-评审/
+*.xlsx
+*.xls
+*.csv
+*.dta
+*.rds
+*.RData
+
+# Model artifacts and generated experiment outputs
+checkpoints/
+figures/
+results.txt
+ablation_results.txt
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Papers, slides, and generated document/build artifacts
+*.pdf
+*.docx
+*.pptx
+beamer_v2_word_only/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.venv/
+venv/
+env/
+.conda/
+
+# Jupyter and notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE, local agent, and OS files
+.vscode/
+.idea/
+.codex
+.codex/
+.agents/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and temporary output
+*.log
+*.tmp
+tmp_*.py
+runs/
+logs/
+output/
+

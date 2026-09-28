@@ -1,0 +1,40 @@
+# ============================================================
+# 舱室火灾预警系统 — Python 依赖清单
+# Python 3.11 | CUDA 12.8
+# 生成日期: 2026-02-19
+# ============================================================
+
+# ---------- 深度学习框架 ----------
+# PyTorch CUDA 版本，GPU 加速训练
+# 安装命令见下方注释，不能直接 pip install
+# torch==2.10.0+cu128
+# torchvision==0.25.0+cu128
+
+# ---------- 数据处理 ----------
+numpy==2.3.5
+pandas==3.0.1
+openpyxl==3.1.5          # 读写 Excel (.xlsx)
+
+# ---------- 机器学习工具 ----------
+scikit-learn==1.8.0       # 分层数据划分、评估指标
+
+# ---------- 可视化（可选）----------
+matplotlib>=3.7.0         # 训练曲线绘图
+
+# ============================================================
+# 安装说明
+# ============================================================
+#
+# 1. 创建并激活 conda 环境（推荐）:
+#    conda create -n rl python=3.11
+#    conda activate rl
+#
+# 2. 安装 PyTorch（CUDA 12.8）:
+#    pip install torch==2.10.0+cu128 torchvision==0.25.0+cu128 \
+#        --index-url https://download.pytorch.org/whl/cu128
+#
+# 3. 安装其余依赖:
+#    pip install -r requirements.txt
+#
+# 若无 GPU，将步骤 2 替换为:
+#    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
